@@ -151,11 +151,6 @@ if HEROKU:
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
     STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
     STATIC_ROOT = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-    STATICFILES_FINDERS = (
-        'django.contrib.staticfiles.finders.FileSystemFinder',
-        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-        'compressor.finders.CompressorFinder',
-    )
     STATICFILES_STORAGE = 'storage_backends.StaticStorage'
     DEFAULT_FILE_STORAGE = 'storage_backends.MediaStorage'
 
@@ -169,7 +164,7 @@ else:
         os.path.join(BASE_DIR, 'static'),
     )
     
-    STATICFILES_FINDERS = (
-        'django.contrib.staticfiles.finders.FileSystemFinder',
-        'django.contrib.staticfiles.finders.AppDirectoriesFinder'
-    )
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder'
+)
