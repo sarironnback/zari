@@ -138,9 +138,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 # STORAGE_DOMAIN_NAME = config('STORAGE_DOMAIN_NAME')
-AWS_PRELOAD_METADATA = True
 
 if HEROKU:
+    AWS_PRELOAD_METADATA = True
     AWS_QUERYSTRING_AUTH = False
     AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
