@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
+from django.conf import settings
 from pages.models import Creation, About, Contact
 
 # TODO: Setup admin relation
@@ -12,6 +13,7 @@ def index(request):
     creation_cleaned = creations.exclude(id=creation_first.id)
 
     return render(request, 'home.html', {
+        'HEROKU': settings.HEROKU,
         'creation_first': creation_first,
         'creations': creation_cleaned
     })
