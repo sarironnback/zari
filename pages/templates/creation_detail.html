@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load staticfiles%}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}not-index detail{% endblock %}
+
+{% block banner %}
+<section id="banner">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="banner-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #banner {background-image: url({{creation_detail.image.url}});}
+</style>
+{% endblock %}
+
+{% block container %}
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12">
+                <p class="datetime">{{ creation_detail.created_at }}</p>
+                <h2>{{creation_detail.title}}</h2>
+                <div class="description">{{ creation_detail.description|safe|truncatechars:324 }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block information %}
+<section id="informations">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="block-informations block-informations-1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="row">
+                    <a href="{% url 'about' %}">
+                        <h3><i class="fa fa-long-arrow-left" aria-hidden="true"></i> See with my eyes.</h3>
+                        <p>Lorem Ipsum Dolor.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="block-informations block-informations-2 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="row">
+                    <a href="{% url 'contact' %}">
+                        <h3>Get your glass own work <i class="fa fa-long-arrow-right" aria-hidden="true"></i></h3>
+                        <p>Lorem Ipsum Dolor.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}not-index{% endblock %}
+
+{% block banner %}
+<section id="banner">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="banner-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h1>Get your glass work, reach me!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block container %}
+    <section id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4 col-md-4 ol-md-offset-4 col-sm-12 col-xs-12">
+
+                    <form id="contactform">
+                        <div class="form-wrapper">
+                                <label for="email">Your address email:</label>
+                                <input id="email" name="email" type="text" class="form-control" placeholder="mail@example.com">
+                        </div>
+                        
+                        <div class="form-wrapper">
+                                <label for="message">Your message:</label>
+                                <textarea id="message" name="message" type="text" class="form-control" placeholder="Hey! I like it..."></textarea>
+                        </div>
+
+                        <div class="form-wrapper">
+                                <button type="submit" class="btn btn-submit pull-right">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block information %}
+<section id="informations">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="block-informations block-informations-1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="row">
+                    <a href="{% url 'about' %}">
+                        <h3><i class="fa fa-long-arrow-left" aria-hidden="true"></i> See with my eyes.</h3>
+                        <p>Lorem Ipsum Dolor.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="block-informations block-informations-2 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="row">
+                    <a href="{% url 'index' %}">
+                        <h3>Check my artworks <i class="fa fa-long-arrow-right" aria-hidden="true"></i></h3>
+                        <p>Lorem Ipsum Dolor.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

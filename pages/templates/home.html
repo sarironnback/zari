@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}index{% endblock %}
+
+{% block banner %}
+<section id="banner">
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="banner-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                {% if creation_first %}
+                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                    <img src="{% static 'img/Zari.png' %}">
+                </div>
+
+                <div class="text-handler col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                    <p>{{creation_first.create_at}}</p>
+                    <h1>{{creation_first.title}}</h1>
+                    <p class="description">{{ creation_first.description|safe|truncatechars:208 }}</p>
+
+                    <a class="btn-to-details" href="{% url 'detail' creation_first.slug %}">Discover here...</a>
+                </div>
+
+                <style>
+                    #banner {background-image: url({{creation_first.image.url}});}
+                </style>
+                {% else %}
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <img src="{% static 'img/Zari.png' %}">
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+<div>
+</section>
+{% endblock %}
+
+{% block container %}
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                {% if creations %}
+                    {% for creation in creations %}
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="creation-block">
+                            <div class="image-handler">
+                                <img src="{{creation.image.url}}">
+                            </div>
+                            <div class="text-handler">
+                                <p class="datetime">{{ creation.created_at }}</p>
+                                <h2>{{creation.title}}</h2>
+                                <p class="description">{{ creation.description|safe|truncatechars:324 }}</p>
+
+                                <a class="btn-to-details" href="{% url 'detail' creation.slug %}">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="creation-block col-lg-4 col-lg-offset-4 col-md-8 col-md-offset-4 col-sm-12 col-xs-12">
+                        <p>No creation was added yet.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block information %}
+<section id="informations">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="block-informations block-informations-1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="row">
+                    <a href="{% url 'about' %}">
+                        <h3><i class="fa fa-long-arrow-left" aria-hidden="true"></i> See with my eyes.</h3>
+                        <p>Lorem Ipsum Dolor.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="block-informations block-informations-2 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="row">
+                    <a href="{% url 'contact' %}">
+                        <h3>Get your glass own work <i class="fa fa-long-arrow-right" aria-hidden="true"></i></h3>
+                        <p>Lorem Ipsum Dolor.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
