@@ -29,17 +29,17 @@
                     <form id="contactform" method="POST" action="{% url 'contact' %}">
                         {% csrf_token %}
                         <div class="form-wrapper">
-                                <label for="email">Your address email:</label>
-                                <input id="email" name="email" type="email" class="form-control" placeholder="mail@example.com">
+                            <label for="email">Your address email:</label>
+                            <input id="email" required name="email" type="email" class="form-control" placeholder="mail@example.com">
                         </div>
                         
                         <div class="form-wrapper">
-                                <label for="message">Your message:</label>
-                                <textarea id="message" name="message" type="text" class="form-control" placeholder="Whatever floats your boat..."></textarea>
+                            <label for="message">Your message:</label>
+                            <textarea id="message" required name="message" type="text" class="form-control" placeholder="Whatever floats your boat..."></textarea>
                         </div>
 
                         <div class="form-wrapper">
-                                <button type="submit" class="btn btn-submit pull-right">Send message</button>
+                            <button type="submit" class="btn btn-submit pull-right">Send message</button>
                         </div>
                     </form>
                 </div>
