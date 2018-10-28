@@ -6,9 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="author" content="www.zari.com">
+      <meta name="author" content="Sari Rönnback">
+      <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
+      
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -18,7 +19,7 @@
 
       {% block head %}{% endblock %}
   </head>
-  <body class="{% block body %}home{% endblock %}">
+  <body class="{% block body %}{% endblock %}">
 
     <div id="navbar">
       {% include 'navbar.html' %}
