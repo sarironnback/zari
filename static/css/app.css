@@ -162,14 +162,13 @@ p, a, span, li {
 }
 
 #banner .btn-to-details {
-  display: block;
+  display: inline-block;
   margin-top: 20px;
   padding:10px 20px;
   color:#d6ae73;
   border:1px solid #d6ae73;
   border-radius:4px;
   width: auto;
-  float: left;
 }
 
 .creation-block {
@@ -274,7 +273,7 @@ p, a, span, li {
     display: none;
   }
 
-  .home .logo {
+  .index .logo {
     width:100%;
   }
   

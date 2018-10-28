@@ -20,7 +20,7 @@
                 <div class="text-handler col-lg-7 col-md-7 col-sm-12 col-xs-12">
                     <p>{{creation_first.create_at}}</p>
                     <h1>{{creation_first.title}}</h1>
-                    <p class="description">{{ creation_first.description|safe|truncatechars:208 }}</p>
+                    <div class="description">{{ creation_first.description|safe|truncatechars:208 }}</div>
 
                     <a class="btn-to-details" href="{% url 'detail' creation_first.slug %}">Discover here...</a>
                 </div>
