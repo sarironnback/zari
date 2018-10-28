@@ -78,7 +78,7 @@ p, a, span, li {
 }
 
 .detail #banner .container-fluid {
-  padding:280px 30px 280px;
+  padding:0px 0px 0px;
 }
 
 
@@ -94,6 +94,11 @@ p, a, span, li {
 #banner img {
   width:250px;
   height:auto;
+}
+
+.detail #banner .image-cover {
+  width: 100%;
+  height: auto;
 }
 
 #banner .banner-block {
