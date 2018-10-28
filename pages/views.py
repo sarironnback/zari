@@ -4,7 +4,6 @@ from django.conf import settings
 from pages.models import Creation, About, Contact
 
 # TODO: Setup admin relation
-#       Wysiwig
 #       error 404
 
 def index(request):
@@ -35,7 +34,7 @@ def about(request):
 def contact(request):
     if request.method == 'POST':
         Contact.objects.create(email=request.POST.get('email'), message=request.POST.get('message'))
-        return redirect('thankyou')
+        return redirect(reverse('thankyou'))
     return render(request, 'contact.html', {})
 
 

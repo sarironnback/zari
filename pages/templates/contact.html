@@ -26,8 +26,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-4 col-md-4 ol-md-offset-4 col-sm-12 col-xs-12">
-
-                    <form id="contactform">
+                    <form id="contactform" method="POST" action="{% url 'contact' %}">
                         <div class="form-wrapper">
                                 <label for="email">Your address email:</label>
                                 <input id="email" name="email" type="text" class="form-control" placeholder="mail@example.com">

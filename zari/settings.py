@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'collectfast',
     'django.contrib.staticfiles',
     'ckeditor',
     'pages'
@@ -155,6 +156,9 @@ if HEROKU:
     STATICFILES_STORAGE = 'storage_backends.StaticStorage'
     DEFAULT_FILE_STORAGE = 'storage_backends.MediaStorage'
 
+    #STATICFILES_STORAGE = "storages.backends.s3boto.S3BotoStorage"
+    AWS_PRELOAD_METADATA = True
+    COLLECTFAST_THREADS = 20
 else:
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
