@@ -274,12 +274,17 @@ p, a, span, li {
   }
 
   .index .logo {
-    width:100%;
+    width:100% !important;
   }
   
   #banner .text-handler {
     padding-right:0px;
     text-align: center;
+  }
+
+  .btn-to-details {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .index #banner .container-fluid {
