@@ -24,7 +24,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12">
                 <p class="datetime">{{ creation_detail.created_at }}</p>
                 <h2>{{creation_detail.title}}</h2>
-                <div class="description">{{ creation_detail.description|safe|truncatechars:324 }}</div>
+                <div class="description">{{ creation_detail.description|safe }}</div>
             </div>
         </div>
     </div>
