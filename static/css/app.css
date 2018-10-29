@@ -66,6 +66,7 @@ p, a, span, li {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0px auto 0px;
+  position: relative;
 }
 
 .not-index #banner .container-fluid {
@@ -269,10 +270,6 @@ p, a, span, li {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-  .detail #banner .overlay {
-    display: none;
-  }
-
   .index .logo {
     width:100% !important;
   }
