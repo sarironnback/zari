@@ -101,8 +101,11 @@ p, a, span, li {
   height: auto;
 }
 
+.detail .navbar {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
 .detail #banner .overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0) 97%, rgba(0,0,0,0.20) 100%);
   position: absolute;
   top: 0;
   left: 0;
