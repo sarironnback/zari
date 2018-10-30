@@ -83,7 +83,7 @@ p, a, span, li {
 
 
 #banner .container-fluid {
-  background:rgba(0, 0, 0, 0.7);
+  background:rgba(0, 0, 0, 0.24);
 }
 
 .detail #banner .container-fluid {
@@ -102,7 +102,7 @@ p, a, span, li {
 }
 
 .detail #banner .overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 180%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0) 97%, rgba(0,0,0,0.20) 100%);
   position: absolute;
   top: 0;
   left: 0;
