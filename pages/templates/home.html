@@ -61,6 +61,9 @@
                             </div>
                         </div>
                     </div>
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="clearfix"></div>
+                        {% endif %}
                     {% endfor %}
                 {% else %}
                     <div class="creation-block col-lg-4 col-lg-offset-4 col-md-8 col-md-offset-4 col-sm-12 col-xs-12">
