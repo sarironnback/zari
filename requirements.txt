@@ -5,7 +5,7 @@ Collectfast==0.5.2
 dj-database-url==0.4.2
 django-ckeditor==5.4.0
 django-storages==1.6.5
-Pillow==6.2.0
+Pillow==9.0.0
 python-decouple==3.1
 requests==2.20.0
 gunicorn==19.7.1
